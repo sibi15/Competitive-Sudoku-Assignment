@@ -1,0 +1,47 @@
+Changelog
+---------
+
+version v4:
+- Use player number 1 and 2 instead of 0 and 1.
+
+version v5:
+- Improved the rendering of the boards, by adding borders.
+- The --first and --second arguments of simulate_game.py no longer 
+  require the postfix .sudokuai.
+
+version v6:
+- Fix the file boards/empty-2x3.txt.
+
+version v7:
+- Use zero based indexing of rows and columns in the board rendering.
+- Report the correct winner when a taboo move has been played.
+
+version v8:
+- Added some width and height methods to SudokuBoard.
+- Added a current_player method to GameState.
+
+version v9:
+- Added saving options to the SudokuAI base class.
+- Added random_save_player as an example.
+- Added automatic removal of the save files before a run is started in simulate_game.py.
+
+version v10:
+- Minor updates for the 2022 course.
+
+version v11:
+- Added a script play_match.py.
+
+version v12:
+- Fix play_match.py such that it runs on Windows.
+- Added a --quiet flag to simulate_game.py.
+- Added a --verbose flag to play_math.py.
+
+version v13:
+- Call multiprocessing.set_start_method('fork') to avoid a delay for the first move.
+
+version 14
+- Use a tuple type `Square = tuple[int, int]` to represent the coordinates of a square.
+- The players are now passed as positional arguments in simulate_game.py and play_match.py.
+  This means that the `--first=` and `--second=` prefixes are now omitted.
+- Added a `--warm-up` flag to avoid a time out on the first move.
+- Added a `--playmode` flag for playing with restrictions on the playable squares.
